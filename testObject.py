@@ -15,11 +15,16 @@ class testObjects(unittest.TestCase):
     def testRemovePosNum(self):
         numbers = [2, 4, 0, 9, 8, 1, 0, 0, 0]
         row = []
+        solver = object.Solver()
         for number in numbers:
             row.append(object.Square(number))
+        solver.solveRow(row)
         expectedList = [3, 5, 6, 7]
         resultList = row[8].posibleNumbers
         self.assertEqual(resultList, expectedList)
+
+    # TODO: def testMakeRow(self):
+    # TODO: def testRowSolved(self):
 
 
 if __name__ == '__main__':

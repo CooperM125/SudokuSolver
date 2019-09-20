@@ -24,10 +24,25 @@ class Square():
     def __init__(self, number):
         self.number = number
         posNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-        posNumbers.remove(1)
+        if number != 0:
+            posNumbers.remove(number)
         self.posibleNumbers = posNumbers
 
     def lastNumber(self):
         if self.posibleNumbers.len() == 0:
             self.number = self.posibleNumbers[0]
             self.posibleNumbers = []
+
+
+class Solver():
+
+    def solveRow(self, row):
+        numInRow = []
+        for square in row:
+            if square.number != 0:
+                numInRow.append(square.number)
+        for square in row:
+            for x in numInRow:
+                if x in square.posibleNumbers:
+                    square.posibleNumbers.remove(x)
+        return
