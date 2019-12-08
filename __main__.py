@@ -1,4 +1,4 @@
-import board
+import object
 list = [1, 2, 3, 4, 5, 6, 7, 8, 9,
         1, 2, 3, 4, 5, 6, 7, 8, 9,
         1, 2, 3, 4, 5, 6, 7, 8, 9,
@@ -19,5 +19,5 @@ list2 = [2, 4, 0, 9, 8, 1, 0, 0, 0,
          0, 5, 7, 6, 0, 8, 0, 1, 2,
          0, 0, 0, 1, 5, 3, 0, 7, 4]
 
-board = board.Board(list2)
+board = object.Board(list2)
 board.printBoard()

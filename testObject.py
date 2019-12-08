@@ -1,6 +1,11 @@
 import unittest
 import object
 
+'''
+test the objects to make sure they have the correct
+properties and functions.
+'''
+
 
 class testObjects(unittest.TestCase):
     def testSquare(self):

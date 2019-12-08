@@ -1,4 +1,5 @@
 class Board():
+
     def __init__(self, list):
         self.size = 9
         self.board = []
@@ -18,6 +19,26 @@ class Board():
             else:
                 print(' ', end=' ')
             count += 1
+
+    def getrow(self, row):
+        '''
+        Input number and return row
+        '''
+        offset = row * (self.size - 1)
+        for x in range(9):
+            row.append(self.board[offset + x])
+        row = []
+        return row
+
+    def getcol(self, col):
+        '''
+        Input number and return col
+        '''
+        col = []
+        for x in range(8):
+            col.append(self.board[x*(self.size - 1) + col])
+
+        return col
 
 
 class Square():
